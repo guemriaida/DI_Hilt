@@ -74,7 +74,7 @@ class MainActivity : ComponentActivity() {
     private fun setUpObserver() {
         with(viewModel) {
             dogResponse.observe(this@MainActivity) {
-                Log.e(TAG, "setUpObserver: "+ it.message)
+                Log.e(TAG, "setUpObserver 1 : "+ it.message)
 //                Glide.with(this@MainActivity)
 //                    .load(it.message)
 //                    .placeholder(R.drawable.ic_launcher_background)
@@ -83,7 +83,8 @@ class MainActivity : ComponentActivity() {
             }
 
             viewModel.error.observe(this@MainActivity) {
-                Toast.makeText(this@MainActivity, it, Toast.LENGTH_SHORT).show()
+                Log.e(TAG, "setUpObserver 2 : " + it )
+                Toast.makeText(this@MainActivity, it, Toast.LENGTH_LONG).show()
             }
         }
     }
