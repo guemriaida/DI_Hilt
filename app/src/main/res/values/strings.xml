@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">DI Hilt</string>
+    <string name="dog">dog\n</string>
+</resources>
